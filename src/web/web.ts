@@ -19,4 +19,4 @@ app.use("/", routes);
 export const PORT = Number(process.env.PORT) || 3000;
 export const IP = process.env.IP || "127.0.0.1";
 
-app.listen(PORT, IP, () => console.log("Server panel started"));
+app.listen(PORT, IP, () => console.log("Server panel started on port" + PORT));
