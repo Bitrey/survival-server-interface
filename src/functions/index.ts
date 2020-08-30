@@ -18,7 +18,7 @@ export const getRamUsage = (): {
     used: string;
 } => {
     const percentage = Number(((1 - freememPercentage()) * 100).toFixed(2));
-    const total = prettyBytes(totalmem() / 2);
-    const used = prettyBytes((totalmem() - freemem()) / 2);
+    const total = prettyBytes(totalmem());
+    const used = prettyBytes(totalmem() - freemem());
     return { percentage, total, used };
 };

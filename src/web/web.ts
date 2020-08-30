@@ -6,7 +6,7 @@ import path from "path";
 
 // Views
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "/views"));
 
 // Serve static files
 app.use(express.static(path.join(__dirname + "/public")));

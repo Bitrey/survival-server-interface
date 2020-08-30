@@ -1,0 +1,2 @@
+THIS DOESN'T WORK
+npx babel src/web/public/js --out-dir dist/web/public/js && 
