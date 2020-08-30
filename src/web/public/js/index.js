@@ -49,12 +49,13 @@ const updateData = async () => {
             ` (prossimo aggiornamento <strong>${nextUpdate}</strong>)`;
 
         // Server
-        addressElem.textContent = hostname;
-        playersElem.textContent = `${players.online}/${players.max}`;
-        motdElem.textContent = motd.html;
-        versionElem.textContent = version;
+        if (hostname) addressElem.textContent = hostname;
+        if (players)
+            playersElem.textContent = `${players.online}/${players.max}`;
+        if (motd) motdElem.textContent = motd.html;
+        if (version) versionElem.textContent = version;
 
-        if (players.list) {
+        if (players && players.list) {
             playersElem.innerHTML +=
                 "\n<small><strong>" +
                 players.list.join(", ") +

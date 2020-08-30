@@ -14,7 +14,7 @@ import config from "../config";
 import moment from "moment";
 moment.locale("it");
 
-import savedData from "../db/data.json";
+const savedData = require(config.LAST_REQUEST_PATH);
 const db: DB = { lastRequest: null, latestData: null };
 try {
     // Try to parse last request data
@@ -42,8 +42,19 @@ router.get("/get-usage", async (req: Request, res: Response) => {
             "minutes"
         );
 
-        if (!db.lastRequest || minutesAgo.isSameOrAfter(db.lastRequest)) {
-            console.log("Nuova richiesta inviata");
+        if (
+            // Unknown last request date
+            !db.lastRequest ||
+            // No latest data
+            !db.latestData ||
+            // Object is empty
+            (typeof db.latestData === "object" &&
+                !Object.keys(db.latestData).length) ||
+            // Last request was made over set minutes ago
+            minutesAgo.isSameOrAfter(db.lastRequest)
+        ) {
+            // DEBUG
+            // console.log("Nuova richiesta inviata");
 
             // Immediately set last request as current date
             db.lastRequest = moment();
