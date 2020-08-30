@@ -17,6 +17,8 @@ h3 {
 #mondo {
     width: 100%;
     min-height: 100vh;
+    resize: both;
+    overflow: auto;
 }
 
 .uk-container {
