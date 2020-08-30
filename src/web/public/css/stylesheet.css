@@ -1,0 +1,25 @@
+.separator {
+    margin: 20px;
+}
+
+body {
+    background-color: #2c2f33;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+    color: white;
+}
+
+#mondo {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.uk-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

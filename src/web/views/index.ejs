@@ -1,0 +1,61 @@
+<%- include ('./partials/header') %>
+
+<div class="uk-container">
+    <h1 class="uk-heading-line uk-text-center"><span>Survival 1.16.2</span></h1>
+    <div class="uk-text-center" id="from-now"><div uk-spinner></div></div>
+
+    <!-- <hr class="separator" /> -->
+
+    <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+        <div>
+            <div class="uk-card uk-card-secondary uk-card-body">
+                <h3 class="uk-card-title">Indirizzo</h3>
+                <div id="address"><div uk-spinner></div></div>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-secondary uk-card-body">
+                <h3 class="uk-card-title">Uso CPU</h3>
+                <div id="cpu-usage"><div uk-spinner></div></div>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-secondary uk-card-body">
+                <h3 class="uk-card-title">Uso RAM</h3>
+                <div id="ram-usage"><div uk-spinner></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+        <div>
+            <div class="uk-card uk-card-secondary uk-card-body">
+                <h3 class="uk-card-title">Players online</h3>
+                <div id="players"><div uk-spinner></div></div>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-secondary uk-card-body">
+                <h3 class="uk-card-title">MOTD</h3>
+                <div id="motd"><div uk-spinner></div></div>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-secondary uk-card-body">
+                <h3 class="uk-card-title">Versione</h3>
+                <div id="version"><div uk-spinner></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <hr class="separator" /> -->
+
+    <h2 class="uk-heading-line uk-text-center"><span>Mappa del mondo</span></h2>
+    <iframe
+        id="mondo"
+        src="http://michelinodibologna.bitrey.it:8123"
+        frameborder="0"
+    ></iframe>
+</div>
+
+<%- include ('./partials/footer') %>
